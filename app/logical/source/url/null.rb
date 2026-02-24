@@ -51,6 +51,8 @@ class Source::URL::Null < Source::URL
       "Colors Live"
     in "comicvine", "gamespot.com"
       "Comic Vine"
+    in _, "commiss.io"
+      "Commiss.io"
     # XXX curiouscat.qa is possibly a different site
     # https://www.bleepingcomputer.com/news/security/popular-qanda-app-curious-cat-loses-domain-posts-bizarre-tweets/
     in _, ("curiouscat.live" | "curiouscat.me" | "curiouscat.qa")
@@ -99,6 +101,8 @@ class Source::URL::Null < Source::URL
       "Instabio"
     in _, "itch.io"
       "Itch.io"
+    in _, "lava.top"
+      "Lava.top"
     in _, "leagueofcomicgeeks.com"
       "League of Comic Geeks"
     in _, ("line.me" | "line-apps.com")
@@ -183,6 +187,8 @@ class Source::URL::Null < Source::URL
       "Square"
     in _, ("steamstatic.com" | "steamcommunity.com")
       "Steam"
+    in _, "straw.page"
+      "Straw.page"
     in _, ("subscribestar.adult" | "subscribestar.com")
       "SubscribeStar"
     in _, "superrare.com"
@@ -231,6 +237,8 @@ class Source::URL::Null < Source::URL
       "Wix"
     in _, "wordpress.com"
       "WordPress"
+    in _, "ych.art"
+      "YCH.art"
     in _, "youtu.be"
       "Youtube"
     in _, nil
