@@ -13,7 +13,7 @@ class Source::URL::Null < Source::URL
       "7-Eleven MyShip"
     in _, "allmylinks.com"
       "AllMyLinks"
-    in _, "animenewsnetwork.com"
+    in _, ("animenewsnetwork.com" | "animenewsnetwork.cc")
       "Anime News Network"
     in _, ("aminoapps.com" | "narvii.com")
       "Amino"
@@ -37,6 +37,8 @@ class Source::URL::Null < Source::URL
       "BASE"
     in _, "bigcartel.com"
       "Big Cartel"
+    in _, "booru.org"
+      "Booru.org"
     in _, "buymeacoffee.com"
       "Buy Me a Coffee"
     in _, "cash.app"
@@ -95,6 +97,8 @@ class Source::URL::Null < Source::URL
       "Image Comics"
     in _, "imgbb.com"
       "ImgBB"
+    in _, "img.ly"
+      "img.ly"
     in _, "instabio.cc" | "linkbio.co"
       "Instabio"
     in _, "itch.io"
@@ -177,6 +181,8 @@ class Source::URL::Null < Source::URL
       "Solo.to"
     in _, ("soundcloud.com" | "sndcdn.com")
       "SoundCloud"
+    in _, "smutba.se"
+      "SmutBase"
     in _, ("spotify.com" | "spotifycdn.com")
       "Spotify"
     in _, "square.site" | "squareup.com"
@@ -185,6 +191,8 @@ class Source::URL::Null < Source::URL
       "Steam"
     in _, "straw.page"
       "Straw.page"
+    in _, ("strikingly.com" | "mystrikingly.com")
+      "Strikingly"
     in _, ("subscribestar.adult" | "subscribestar.com")
       "SubscribeStar"
     in _, "superrare.com"
@@ -201,6 +209,8 @@ class Source::URL::Null < Source::URL
       "Tapas"
     in _, "teepublic.com"
       "TeePublic"
+    in _, ("pipa.jp" | "tegaki.com")
+      "Tegaki"
     in _, ("telegram.org" | "t.me")
       "Telegram"
     in _, "tensor.art"
@@ -219,6 +229,8 @@ class Source::URL::Null < Source::URL
       "Trello"
     in _, "tsunagu.cloud"
       "tsunagu.cloud"
+    in _, ("twpl.jp" | "twipple.jp")
+      "Twipple"
     in _, ("vimeo.com" | "vimeocdn.com" | "livestream.com")
       "Vimeo"
     in _, "webtoons.com"
@@ -231,7 +243,7 @@ class Source::URL::Null < Source::URL
       "Willow"
     in _, ("wix.com" | "wixsite.com" | "wixstatic.com")
       "Wix"
-    in _, "wordpress.com"
+    in _, ("wordpress.com" | "wp.com")
       "WordPress"
     in _, "ych.art"
       "YCH.art"
@@ -570,7 +582,8 @@ class Source::URL::Null < Source::URL
       nil
 
     # http://tegaki.pipa.jp/515745
-    in _, "pipa.jp", *rest
+    # https://tegaki.com/515745/
+    in _, ("pipa.jp" | "tegaki.com"), *rest
       nil
 
     # https://pomf.tv/oozutsucannon
