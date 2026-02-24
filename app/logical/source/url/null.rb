@@ -57,8 +57,6 @@ class Source::URL::Null < Source::URL
     # https://www.bleepingcomputer.com/news/security/popular-qanda-app-curious-cat-loses-domain-posts-bizarre-tweets/
     in _, ("curiouscat.live" | "curiouscat.me" | "curiouscat.qa")
       "Curious Cat"
-    in _, ("dlsite.com" | "dlsite.net" | "dlsite.jp")
-      "DLSite"
     in _, "direct.me"
       "Direct.me"
     in _, "doujinshi.org"
@@ -357,9 +355,6 @@ class Source::URL::Null < Source::URL
     in _, _, *subdirs, "diarypro", "diary.cgi" if params[:mode] == "image" && params[:upfile].present?
       @work_id = params[:upfile][/^\d+/]
       @page_url = [site, *subdirs, "diarypro/diary.cgi?no=#{@work_id}"].join("/")
-
-    in _, "dlsite.com", *rest
-      nil
 
     # http://com2.doujinantena.com/contents_jpg/cf0224563cf7a75450596308fe651d5f/018.jpg
     # http://sozai.doujinantena.com/contents_jpg/cf0224563cf7a75450596308fe651d5f/009.jpg

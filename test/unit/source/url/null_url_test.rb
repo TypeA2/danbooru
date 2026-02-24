@@ -31,7 +31,6 @@ module Source::Tests::URL
         assert_equal("Class101", Source::URL.parse("https://class101.net/products/315Q19v2UzhkELv2X4Xa").site_name)
         assert_equal("Colors Live", Source::URL.parse("https://www.colorslive.com/artist/nasubino").site_name)
         assert_equal("Curious Cat", Source::URL.parse("https://curiouscat.live/LOPPromptbot").site_name)
-        assert_equal("DLSite", Source::URL.parse("https://www.dlsite.com/maniax/circle/profile/=/maker_id/RG33298.html").site_name)
         assert_equal("Danbooru", Source::URL.parse("https://danbooru.donmai.us/users/1176221").site_name)
         assert_equal("Doujinshi.org", Source::URL.parse("http://www.doujinshi.org/browse/author/92838/Ojo").site_name)
         assert_equal("Doujinshi.org", Source::URL.parse("http://doujinshi.mugimugi.org/browse/author/47832/MisRoma/").site_name)
