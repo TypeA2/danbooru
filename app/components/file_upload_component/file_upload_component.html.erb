@@ -3,7 +3,7 @@
     <%= f.input :files, as: :file, wrapper_html: { class: "hidden" }, input_html: { "multiple": max_files_per_upload > 1 }  %>
 
     <div class="rounded-t-lg p-4 pb-8 max-h-360px thin-scrollbar bg-dropzone">
-      <label id="source-label" class="w-full text-center mb-1 block !font-normal">Paste URL here</label>
+      <label id="source-label" class="w-full text-center mb-1 block !font-normal" for="upload_source">Paste URL here</label>
       <%= f.input :source, label: false, as: :string, placeholder: "Paste a pixiv link, tweet, etc", input_html: { value: url, class: "text-center bg:card" }, wrapper_html: { class: "px-4 text-center !m-0" } %>
       <span class="hint text-muted text-xs text-center w-full block mt-1">
         <%= link_to "See here", bookmarklet_path %> for a list of supported sites.
